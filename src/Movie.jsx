@@ -17,7 +17,7 @@ const [picAct, setPicAct] = useState([])
     const [current, setCurrent] = useState({});
 
     const find=async ()=>{
-      let result=await fetch(`http://www.omdbapi.com/?apikey=4708741a&t=${title}&y=${y}`);
+      let result=await fetch(`https://www.omdbapi.com/?apikey=4708741a&t=${title}&y=${y}`);
       let data=await result.json([]);
       setCurrent(data);
   
