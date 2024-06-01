@@ -5,8 +5,7 @@ export default function MovieCard({movie}) {
 
   return (
   
-    <div>
-
+  
          <div className="movie">
          <Link to={`/movie/${movie.title}/${movie.release_date}`}>
         <div>
@@ -26,6 +25,6 @@ export default function MovieCard({movie}) {
        </Link>
       </div>
    
-    </div>
+   
   )
 }

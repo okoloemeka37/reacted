@@ -14,32 +14,75 @@
 
 body {
   font-family: var(--font-roboto);
-  background-color: #212426;
+ 
 }
 a{
   text-decoration: none;
 }
-.app {
-  padding: 4rem;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
 }
 
-h1 {
+.checkbox-label {
+  background-color: #111;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-moon {color: #f1c40f;}
+
+.fa-sun {color: #f39c12;}
+
+.checkbox-label .ball {
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
+}
+
+.tlip{
+  position: absolute;
+  right: 3%;
+  margin-top: 2%;
+}
+
+.app {
+
+width: 100%;
+text-align: center;
+height: fit-content;
+padding-bottom: 20%;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.h1p a{
   font-size: 3rem;
   letter-spacing: 0.9px;
-  background: linear-gradient(
-    90deg,
-    rgba(249, 211, 180, 1) 0%,
-    rgba(249, 211, 180, 0) 100%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+color: #a1a1a1;
   width: fit-content;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-style: italic;
+ 
 }
 
 .search {
@@ -50,11 +93,12 @@ h1 {
   align-items: center;
   justify-content: center;
 
-  padding: 1.5rem 1.75rem;
+  padding:10px 15px;
   border-radius: 3rem;
   background: #1f2123;
-  -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
-  box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+
+  box-shadow: 3px 3px 5px #1c1d1f, -3px -3px 5px #222527;
+  margin-left: 15%;
 }
 
 .search input {
@@ -77,7 +121,7 @@ h1 {
 }
 
  .search button {
-  padding: 20px 40px;
+  padding: 10px 15px;
   border-radius: 0.5rem;
   margin-left: 15px;
   color: #a1a1a1;
@@ -196,6 +240,7 @@ h1 {
 @media screen and (max-width: 600px) {
   .app {
     padding: 4rem 2rem;
+ 
   }
 
   .search {
@@ -215,6 +260,7 @@ h1 {
 
 @media screen and (max-width: 400px) {
   .app {
+   
     padding: 4rem 1rem;
   }
 

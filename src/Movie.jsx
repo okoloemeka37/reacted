@@ -61,8 +61,8 @@ rpl=actor.split(',');
 
 
   return (
-    <div className='app'>
-        <h1><Link to={'/'}>Zyler Moves</Link></h1>
+    <div>
+        <p className='h1p'><Link to={'/'}>Zyler Moves</Link></p>
         {current.Response !="False"?(
           <div className='card'>
           <div className='card_left'>
@@ -99,7 +99,7 @@ rpl=actor.split(',');
         </div>
         ):(
           <div className="empty">
-          <h2>No Movie Found  The Link might have been chnaged or removed</h2>
+          <h2>No Movie Found  The Link might have been changed or removed</h2>
          
         </div>
         )

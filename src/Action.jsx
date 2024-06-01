@@ -40,12 +40,8 @@ setmovies(data.results);
   
   return (
 
-
-
-
-
-    <div className="app">
-   <h1><Link to={'/'}>Zyler Moves</Link></h1>
+    <div>
+   <p className='h1p'><Link to={'/'}>Zyler Moves</Link></p>
 
     <div className="search">
       <input placeholder='Search For Movies' value={searchTerm} onChange={(e)=>{setsearchTerm(e.target.value)}}/>
